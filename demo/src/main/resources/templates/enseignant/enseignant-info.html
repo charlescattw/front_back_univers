@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{css/enseignant-info.css}" />
+</head>
+
+<body>
+
+
+<div>
+
+<p th:text="${enseignant.nom_enseignant}"> </p>
+<p th:text="${enseignant.prenom}"> </p>
+
+<ul>
+
+<li th:text="${enseignant.numero_enseignant}"></li>
+<li th:text="${enseignant.date_naissance}"></li>
+<li th:text="${enseignant.grade}"></li>
+<li th:text="${enseignant.date_embauche}"></li>
+
+</ul>
+
+<img th:src="${enseignant.photo}" />
+
+</div>
+
+</body>
+
+</html>

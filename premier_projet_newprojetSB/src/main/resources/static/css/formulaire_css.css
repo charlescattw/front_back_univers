@@ -1,0 +1,13 @@
+form {
+	width: 300px;
+	margin: auto;
+	background: silver;
+}
+
+label {
+	display: block;
+}
+
+legend {
+	color: red;
+}

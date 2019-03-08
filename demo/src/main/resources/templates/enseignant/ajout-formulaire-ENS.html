@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{css/Ajout-ENS.css}"/>
+</head>
+<body>
+
+	<h1>Ajouter un enseignant</h1>
+
+	<div>
+
+		<form id="formulaire1" th:action="@{valider-enseignant}" th:object="${enseignant}" method="post">
+
+			<label>Nom:</label> 
+			<input type="text" id="nom" name="nom" th:field="*{nom_enseignant}"/>
+
+
+			<!-- l'* permet de compléter le champs du formulaire avec la base ce sont -->
+			<!--ce sont les caractéristiques des classes (nom de la variable de classe) à reporter dans le field -->
+
+
+			<label>numero:</label> 
+			<input type="text" id="numero" name="numero" th:field="*{numero_enseignant}" /> 
+			
+			<label>date de naissance :</label> <input type="text" id="date_naissance" name="dateNaissance" />
+			
+			 <label>date d'embauchde :</label> 
+			 <input type="text" id="date_embauche" name="dateEmbauche" />
+			 
+			  <label>Prenom :</label> 
+				<input type="text" id="prenom" name="prenom" th:field="*{prenom}"/> 
+				
+				 <label>Photo :</label>
+				<input type="text" id="photo" name="photo" th:field="*{photo}"/> 
+				
+				 <label>Grade :</label>
+				 <input type="text" id="grade" name="grade" th:field="*{grade}"/> 
+				 
+				<input type="button" value="Valider" onclick="validerLeFormulaire()"/>
+		</form>
+
+	</div>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libvs/jquery/3.3.1/jquery.min.js"> </script>
+	<script type="text/javascript" th:src="@{js/enseignant/validation-ENS.js}">	</script>
+		
+
+
+</body>
+</html>

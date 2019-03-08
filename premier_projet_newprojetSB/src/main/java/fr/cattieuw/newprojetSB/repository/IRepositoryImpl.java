@@ -6,4 +6,6 @@ import fr.cattieuw.newprojetSB.domaine.Utilisateur;
 
 public interface IRepositoryImpl extends JpaRepository<Utilisateur, Integer> {
 
+	
+	
 }

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1"/>
+<meta charset="utf-8"/>
 <title>Insert title here</title>
 </head>
 <body>
 
+<a th:href="@{supprimer(id=${utilisateur.id})}">Supprimer</a>
 <h1 th:text="${utilisateur.nom}"></h1>
 <!--<img alt="Une image" th:src="${utilisateur.adresse}"/> -->
 <h2 th:text="${utilisateur.adresse}"> </h2>
+<a th:href="@{modifier(id=${utilisateur.id})}">Modifier</a>
+
+
 
 </body>
 </html>

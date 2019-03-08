@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/formulaire_css.css}"/>
+
+</head>
+<body>
+
+
+<div id="container">
+
+<form th:action="@{ ajouter-user}" method="POST" th:object="${u}">
+
+  <fieldset>
+  
+       <legend>Vos coordonnées</legend> <!-- Titre du fieldset --> 
+
+       <label for="nom">Quel est votre nom ?</label>
+       <input type="text" name="nom" id="nom" th:field="*{nom}"/> <!-- objet d'un formulaire designé par le caractere * --> 
+
+       <label for="prenom">Quel est votre prénom ?</label>
+       <input type="text" name="prenom" id="prenom" th:field="*{prenom}"/>
+ 
+       <label for="numero">Quel est votre numéro ?</label>
+       <input type="numero" name="numero" id="numero" th:field="*{numero}" />
+
+       <label for="phone">Quel est votre téléphone ?</label>
+       <input type="phone" name="phone" id="phone" th:field="*{phone}"/>
+
+       <label for="email">Quel est votre courriel ?</label>
+       <input type="email" name="email" id="email" th:field="*{email}"/>
+ 
+       <label for="adresse">Quel est votre adresse ?</label>
+       <input type="adresse" name="adresse" id="adresse" th:field="*{adresse}"/> <br/>
+       
+       <input class="btvalider"
+       type="submit"
+       value="Valider"/>
+       
+       <input class="btAnnuler"
+       type="reset"
+       value="Annuler"/> 
+
+   </fieldset>
+
+</form>
+</div>
+</body>
+</html>

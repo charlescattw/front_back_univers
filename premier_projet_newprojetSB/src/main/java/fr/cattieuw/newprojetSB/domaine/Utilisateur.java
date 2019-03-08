@@ -14,7 +14,7 @@ public class Utilisateur {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="ID")
-	private int id;
+	private Integer id;
 
 	@Column(name="NOM")
 	private String nom ;
@@ -23,7 +23,7 @@ public class Utilisateur {
 	private String prenom ;
 
 	@Column(name="NUMERO")
-	private int numero ;
+	private Integer numero ;
 
 	@Column(name="PHONE")
 	private String phone ;
@@ -36,11 +36,11 @@ public class Utilisateur {
 
 
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -60,11 +60,11 @@ public class Utilisateur {
 		this.prenom = prenom;
 	}
 
-	public int getNumero() {
+	public Integer getNumero() {
 		return numero;
 	}
 
-	public void setNumero(int numero) {
+	public void setNumero(Integer numero) {
 		this.numero = numero;
 	}
 

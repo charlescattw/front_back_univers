@@ -19,7 +19,6 @@ public class UtilisateurServiceImpl implements IUtilisateurServiceImpl{
 	public List<Utilisateur> findAllUser(){
 		List<Utilisateur> listUserBdd = repository.findAll();
 		return listUserBdd;
-
 	}
 
 	@Override
@@ -27,4 +26,20 @@ public class UtilisateurServiceImpl implements IUtilisateurServiceImpl{
 		Utilisateur u = repository.findOne(id);
 		return u;
 	}
+
+	@Override
+	public void supprimer(Integer Id) {
+		repository.delete(Id);
+	}
+
+	@Override
+	public void AjouterUtilisateur(Utilisateur u) {
+		repository.save(u);
+	}
+
+	@Override
+	public void modifierU(Utilisateur u) {
+		repository.save(u);
+	}
+
 }
