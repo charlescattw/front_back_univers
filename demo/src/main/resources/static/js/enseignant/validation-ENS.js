@@ -1,5 +1,8 @@
 function validerLeFormulaire() {
-    let gradeElement =
+   
+	   // check grade
+	
+	let gradeElement =
         document.getElementById("grade");
     let grade = gradeElement.value;
 
@@ -10,7 +13,7 @@ function validerLeFormulaire() {
     	gradeElement.classList.remove("erreur");
     }
 
-
+    // check nom
     let nomElement = document.getElementById("nom");
     let nom = nomElement.value;
     if(nom === ""){
@@ -43,8 +46,6 @@ function validerLeFormulaire() {
 
     // check Photo
     
-    
-    
     let lesClassErreur = document.getElementsByClassName("erreur");
     console.log(lesClassErreur);
     console.log("taille du tableau" + lesClassErreur.length);
@@ -53,7 +54,5 @@ function validerLeFormulaire() {
     	console.log("Envoyer le formulaire");
     	document.getElementById("formulaire1")
     }
-    
-    
     
 }

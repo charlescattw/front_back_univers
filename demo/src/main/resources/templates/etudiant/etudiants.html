@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1" />
+<title>Insert title here</title>
+<link rel="styleshit" th:href="@{css/etudiantq.css}" />
+</head>
+<body>
+
+	<h1>
+		<a th:href="@{ajouter-etudiant}"> ajouter un étudiant </a>
+	</h1>
+
+	<div class="container">
+
+		<table>
+
+			<caption>
+
+				<thead>
+					<tr>
+
+						<th>I.N.E</th>
+						<th>prenom</th>
+						<th>nom</th>
+
+					</tr>
+
+				</thead>
+
+				<tbody>
+
+					<tr th:each="en.${etudiants}">
+
+						<td>
+							<p th:text="${en.INE}"></p>
+						</td>
+						
+						<td>
+							<p th:text="${en.prenom_etudiant}"></p>
+						</td>
+						
+						<td>
+							<p th:text="${en.nom_etudiant}"></p>
+						</td>
+
+						<td> <a th:href="@{info-etudiant(id=${en.id})}"> afficher</a> </td>
+
+					</tr>
+
+				</tbody>
+
+
+
+			</caption>
+
+
+		</table>
+
+	</div>
+
+</body>
+</html>
